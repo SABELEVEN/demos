@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Full Power — автосервис в Копейске</title>
+  <meta name="description" content="Автосервис «Full Power» в Копейске: чип-тюнинг, диагностика, ремонт, обслуживание. Онлайн-запись.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Full Power">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@400;500&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">К содержимому</a>
+
+  <header class="topbar" id="topbar">
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="drawer" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span>Меню</span>
+    </button>
+    <a class="brand" href="#/" aria-label="Full Power, на главную">
+      <img src="assets/logo.png" alt="Full Power, автосервис" width="900" height="595">
+    </a>
+    <a class="phone-btn" id="phoneBtn" href="#" aria-label="Позвонить">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      <span id="phoneText"></span>
+    </a>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="dock" aria-label="Нижнее меню">
+    <a href="#/" data-nav="home">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg>
+      <span>Главная</span>
+    </a>
+    <a href="#/services" data-nav="services">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+      <span>Услуги</span>
+    </a>
+    <a href="#/bookings" data-nav="bookings">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2zm-2 8h14v10H5z"/></svg>
+      <span>Мои записи</span>
+    </a>
+  </nav>
+
+  <div class="drawer-root" id="drawerRoot" hidden>
+    <div class="drawer-backdrop" data-drawer-close></div>
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Меню">
+      <div class="drawer-head">
+        <img src="assets/logo.png" alt="Full Power" width="900" height="595">
+        <button class="icon-btn" type="button" data-drawer-close aria-label="Закрыть меню"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <nav class="drawer-nav" aria-label="Основное меню">
+        <a href="#/" data-nav="home">Главная</a>
+        <a href="#/services" data-nav="services">Услуги</a>
+        <a href="#/bookings" data-nav="bookings">Мои записи</a>
+      </nav>
+      <a class="drawer-install" href="#/install" data-nav="install">Установить приложение</a>
+    </aside>
+  </div>
+
+  <div class="sheet-root" id="sheetRoot" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" id="sheet"></section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
