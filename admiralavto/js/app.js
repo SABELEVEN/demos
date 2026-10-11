@@ -186,8 +186,8 @@
       '<p class="lead">Нажмите «Записаться», выберите день и время. Мы подтвердим запись по телефону.</p></div>' +
       servicesList(false) + "</section>" +
 
-      '<section class="section" aria-labelledby="offTitle"><div class="section-head"><h2 class="h2" id="offTitle">Новым клиентам</h2></div>' +
-      '<ul class="offers">' + S.offers.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + "</ul></section>" +
+      ((S.offers && S.offers.length) ? ('<section class="section" aria-labelledby="offTitle"><div class="section-head"><h2 class="h2" id="offTitle">Новым клиентам</h2></div>' +
+      '<ul class="offers">' + S.offers.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + "</ul></section>") : "") +
 
       '<section class="section" aria-labelledby="conTitle"><div class="section-head"><h2 class="h2" id="conTitle">Как нас найти</h2>' +
       '<p class="lead">' + esc(S.district) + ", " + esc(S.city) + "</p></div>" + contactBlock() + "</section>" +
