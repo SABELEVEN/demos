@@ -173,7 +173,7 @@
   function viewHome() {
     return '<div class="wrap">' +
       '<section class="hero" aria-labelledby="heroTitle">' +
-      '<h1 class="sr-only" id="heroTitle">' + esc(S.name) + ". " + esc(S.heroTitleLine1) + " " + esc(S.heroTitleLine2) + "</h1>" +
+      (S.heroHeadline ? "" : '<h1 class="sr-only" id="heroTitle">' + esc(S.name) + ". " + esc(S.heroTitleLine1) + " " + esc(S.heroTitleLine2) + "</h1>") +
       '<div class="photo" id="photo">' +
       '<div class="photo__bg" id="photoBg"></div>' +
       '<div class="photo__empty"><img src="assets/logo.png" alt=""></div>' +
@@ -181,6 +181,7 @@
       (S.heroPhotoLit ? '<img class="photo__img photo__img--lit" id="photoLit" src="' + esc(S.heroPhotoLit) + '" alt="" aria-hidden="true" width="1200" height="1600" decoding="async">' : "") +
       "</div>" +
       "</section>" +
+      (S.heroHeadline ? '<section class="cta" aria-labelledby="heroTitle"><h1 class="cta__title" id="heroTitle">' + esc(S.heroHeadline).replace(/^(.*?) (автомобилей.*)$/, '<span class="cta__line">$1</span> <span class="cta__line">$2</span>') + '</h1><button class="btn cta__btn" type="button" data-book="">Записаться</button></section>' : "") +
 
       '<section class="section" aria-labelledby="svcTitle"><div class="section-head"><h2 class="h2" id="svcTitle">Выберите услугу</h2>' +
       '<p class="lead">Нажмите «Записаться», выберите день и время. Мы подтвердим запись по телефону.</p></div>' +

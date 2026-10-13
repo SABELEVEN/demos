@@ -265,7 +265,7 @@
     if (!frame || !img) return;
     function onLoad() {
       var r = img.naturalWidth / img.naturalHeight;
-      if (Math.abs(r - 3 / 4) / (3 / 4) > 0.04) {
+      if (Math.abs(r - 4 / 3) / (4 / 3) > 0.04) {
         frame.classList.add("is-fit");
         document.getElementById("photoBg").style.backgroundImage = "url('" + img.currentSrc.replace(/'/g, "%27") + "')";
       }

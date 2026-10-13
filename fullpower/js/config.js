@@ -9,6 +9,7 @@ window.STUDIO = {
   city: "Копейск",
   district: "проспект Победы",
 
+  heroHeadline: "Чип-тюнинг и ремонт автомобилей в Копейске",
   heroTitleLine1: "Ваш автомобиль.",
   heroTitleLine2: "В надёжных руках.",
   heroText:
