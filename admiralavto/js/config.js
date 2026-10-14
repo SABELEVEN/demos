@@ -18,7 +18,7 @@ window.STUDIO = {
   heroPhoto: "assets/hero.jpg",
   // Второе фото того же кадра с включёнными фарами: плавно появляется и гаснет каждые 5 секунд.
   // Чтобы отключить оживление, оставьте пустую строку "".
-  heroPhotoLit: "assets/hero-on.jpg",
+  heroPhotoLit: "",
   heroPhotoAlt: "Автосервис «АдмиралАвто»",
 
   contacts: {
